@@ -216,6 +216,47 @@ h3 { font-size: 22px; line-height: 1.27; }
 .footer-nav a { color: var(--ink-muted); text-decoration: none; }
 .footer-nav a:hover { color: var(--brand); text-decoration: underline; }
 
+/* ---- Motion (all opt-in, none load-bearing) ---- */
+.site-header { transition: box-shadow 0.25s ease; }
+.site-header.is-scrolled { box-shadow: 0 2px 12px rgba(12, 24, 18, 0.08); }
+
+.cdrs-btn { transition: transform 0.18s ease, filter 0.18s ease, background 0.18s ease; }
+.cdrs-btn:hover { transform: translateY(-1px); }
+.cdrs-btn:active { transform: translateY(0); }
+
+.cdrs-card { transition: transform 0.22s ease, box-shadow 0.22s ease; }
+@media (hover: hover) {
+  .cdrs-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 4px rgba(12, 24, 18, 0.05), 0 14px 32px rgba(12, 24, 18, 0.1);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Hero settles in on load: one short, staged rise. */
+  @keyframes rise-in {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+  }
+  .hero .eyebrow, .hero__title, .hero__lead, .hero__actions, .hero__stats {
+    animation: rise-in 0.55s ease-out backwards;
+  }
+  .hero__title { animation-delay: 0.07s; }
+  .hero__lead { animation-delay: 0.14s; }
+  .hero__actions { animation-delay: 0.21s; }
+  .hero__stats { animation-delay: 0.3s; }
+
+  /* Scroll reveal (class added by main.js; without JS nothing is hidden). */
+  .motion .will-reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  .motion .will-reveal.is-visible { opacity: 1; transform: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .cdrs-btn, .cdrs-card, .site-header { transition: none; }
+  .cdrs-card:hover, .cdrs-btn:hover { transform: none; }
 }
