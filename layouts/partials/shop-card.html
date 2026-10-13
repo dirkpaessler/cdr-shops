@@ -1,0 +1,33 @@
+{{- /* Renders one shop card from a data/shops entry. Context: the shop dict. */ -}}
+{{- $r := .rating -}}
+{{- $overall := printf "%s%s%s" $r.mrv $r.certification $r.delivery -}}
+{{- $worst := "a" -}}
+{{- if in $overall "C" }}{{ $worst = "c" }}{{ else if in $overall "B" }}{{ $worst = "b" }}{{ end -}}
+<article class="cdrs-card{{ if .featured }} cdrs-card--featured{{ end }}">
+  {{ if .featured }}<span class="cdrs-card__eyebrow">Featured</span>{{ end }}
+  <div class="cdrs-card__head">
+    <h3 class="cdrs-card__name">{{ .name }}</h3>
+    <span class="cdrs-rating cdrs-rating--{{ $worst }}" title="Overall rating {{ $overall }} (worst of MRV, certification, delivery)">
+      <span class="cdrs-rating__overall">{{ $overall }}</span>
+    </span>
+  </div>
+  <span class="cdrs-rating__pips">
+    <span class="cdrs-pip cdrs-pip--{{ lower $r.mrv }}"><span class="cdrs-pip__dim">MRV</span>{{ $r.mrv }}</span>
+    <span class="cdrs-pip cdrs-pip--{{ lower $r.certification }}"><span class="cdrs-pip__dim">Cert</span>{{ $r.certification }}</span>
+    <span class="cdrs-pip cdrs-pip--{{ lower $r.delivery }}"><span class="cdrs-pip__dim">Del</span>{{ $r.delivery }}</span>
+  </span>
+  <div class="cdrs-card__meta">
+    <div class="cdrs-card__meta-row"><p class="cdrs-card__meta-key">Method</p><p class="cdrs-card__meta-val">{{ .method }}</p></div>
+    <div class="cdrs-card__meta-row"><p class="cdrs-card__meta-key">Certified by</p><p class="cdrs-card__meta-val">{{ .certifier | default "—" }}</p></div>
+    <div class="cdrs-card__meta-row"><p class="cdrs-card__meta-key">Delivery</p><p class="cdrs-card__meta-val">{{ .delivery_time | default "—" }}</p></div>
+    <div class="cdrs-card__meta-row"><p class="cdrs-card__meta-key">Purchase</p><p class="cdrs-card__meta-val">{{ .purchase }}</p></div>
+  </div>
+  {{ with .note }}<p class="cdrs-card__note">{{ . }}</p>{{ end }}
+  <div class="cdrs-card__price">
+    <span class="cdrs-card__price-value">{{ .price }}</span>
+    <span class="cdrs-card__price-unit">{{ .price_unit }}</span>
+  </div>
+  <div class="cdrs-card__actions">
+    <a class="cdrs-btn cdrs-btn--primary" href="{{ .url }}" target="_blank" rel="noopener">Go to shop ↗</a>
+  </div>
+</article>

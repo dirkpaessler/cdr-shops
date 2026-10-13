@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96">
+  <!-- CDR Shops mark: shopping bag + drawdown arrow on a pine tile.
+       Tile #175c43 = brand (light), bag #f6f8f6 = surface-0, arrow cut in brand. -->
+  <rect x="0" y="0" width="96" height="96" rx="20" fill="#175c43"/>
+  <path d="M36 36 a12 12 0 0 1 24 0" fill="none" stroke="#f6f8f6" stroke-width="7" stroke-linecap="round"/>
+  <rect x="24" y="34" width="48" height="42" rx="7" fill="#f6f8f6"/>
+  <rect x="44" y="41" width="8" height="17" fill="#175c43"/>
+  <path d="M36 56 h24 l-12 14 z" fill="#175c43"/>
+</svg>

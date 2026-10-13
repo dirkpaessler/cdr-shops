@@ -1,0 +1,16 @@
+# Heirloom — one shop in the directory. Edit and rebuild; the card renders from this file.
+name: "Heirloom"
+weight: 120
+rating:
+  mrv: A
+  certification: B
+  delivery: C
+method: "DAC + storage"
+purchase: "One-time · Subscription"
+price: "US$1,000"
+price_unit: "per tonne CO₂"
+delivery_time: "~6 yrs"
+certifier: ""
+url: "https://heirloomcarbon.myshopify.com/products/individual-removals"
+logo: "/images/shops/heirloom.png"
+note: "US customers only"

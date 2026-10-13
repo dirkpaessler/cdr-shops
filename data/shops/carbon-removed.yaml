@@ -1,0 +1,15 @@
+# Carbon Removed — one shop in the directory. Edit and rebuild; the card renders from this file.
+name: "Carbon Removed"
+weight: 140
+rating:
+  mrv: C
+  certification: C
+  delivery: C
+method: "Various CDR + storage"
+purchase: "One-time · Subscription"
+price: "US$110–1,000"
+price_unit: "per tonne CO₂"
+delivery_time: ""
+certifier: ""
+url: "https://carbonremoved.com/pricing/"
+logo: "/images/shops/carbon-removed.png"

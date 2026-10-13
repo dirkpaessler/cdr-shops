@@ -1,0 +1,15 @@
+# Charm Industrial — one shop in the directory. Edit and rebuild; the card renders from this file.
+name: "Charm Industrial"
+weight: 60
+rating:
+  mrv: A
+  certification: A
+  delivery: B
+method: "Bio-oil pyrolysis + storage"
+purchase: "One-time · Subscription"
+price: "US$600"
+price_unit: "per tonne CO₂"
+delivery_time: ">1 yr"
+certifier: "Isometric"
+url: "https://charmindustrial.com/plans"
+logo: "/images/shops/charm-industrial.png"

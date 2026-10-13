@@ -1,0 +1,34 @@
+baseURL = "https://www.cdr-shops.com/"
+languageCode = "en-us"
+title = "CDR Shops"
+disableKinds = ["taxonomy", "term", "rss"]
+enableRobotsTXT = true
+
+[params]
+  description = "A curated directory of online shops selling verified, durable carbon dioxide removal — rated, compared, purchasable in minutes."
+  contact_email = "info@carbon-drawdown.de"
+
+[menus]
+  [[menus.main]]
+    name = "Why buy CDR?"
+    pageRef = "/why-buy-cdr"
+    weight = 10
+  [[menus.main]]
+    name = "How to choose CDR?"
+    pageRef = "/how-to-choose-cdr"
+    weight = 20
+  [[menus.main]]
+    name = "Shop directory"
+    pageRef = "/cdr-shop-directory"
+    weight = 30
+  [[menus.main]]
+    name = "FAQ"
+    pageRef = "/faq"
+    weight = 40
+  [[menus.main]]
+    name = "About"
+    pageRef = "/about"
+    weight = 50
+
+[markup.goldmark.renderer]
+  unsafe = true

@@ -1,0 +1,15 @@
+# Carbonfuture — one shop in the directory. Edit and rebuild; the card renders from this file.
+name: "Carbonfuture"
+weight: 20
+rating:
+  mrv: A
+  certification: A
+  delivery: A
+method: "Mostly biochar"
+purchase: "One-time"
+price: "US$150"
+price_unit: "per tonne CO₂"
+delivery_time: "<1 yr"
+certifier: "CSI / EBC"
+url: "https://platform.carbonfuture.earth/balancer/portfolios"
+logo: "/images/shops/carbonfuture.png"

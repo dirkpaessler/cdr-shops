@@ -1,0 +1,15 @@
+# Mast — one shop in the directory. Edit and rebuild; the card renders from this file.
+name: "Mast"
+weight: 70
+rating:
+  mrv: A
+  certification: A
+  delivery: B
+method: "Biomass burial + reforestation"
+purchase: "One-time"
+price: "US$395"
+price_unit: "per tonne CO₂"
+delivery_time: "<2 yrs"
+certifier: "Puro.earth"
+url: "https://www.mastreforest.com/buy"
+logo: "/images/shops/mast.png"

@@ -1,0 +1,15 @@
+# Carbon Connect — one shop in the directory. Edit and rebuild; the card renders from this file.
+name: "Carbon Connect"
+weight: 40
+rating:
+  mrv: A
+  certification: A
+  delivery: A
+method: "Biochar"
+purchase: "One-time"
+price: "€142"
+price_unit: "per tonne CO₂"
+delivery_time: "<1 yr"
+certifier: "CSI Global Artisan C-Sink"
+url: "https://shop.carbonconnect.earth/"
+logo: "/images/shops/carbon-connect.png"

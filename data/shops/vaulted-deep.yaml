@@ -1,0 +1,15 @@
+# Vaulted Deep — one shop in the directory. Edit and rebuild; the card renders from this file.
+name: "Vaulted Deep"
+weight: 110
+rating:
+  mrv: A
+  certification: A
+  delivery: C
+method: "Underground storage of organic waste"
+purchase: "One-time · Subscription"
+price: "US$400"
+price_unit: "per tonne CO₂"
+delivery_time: "2028+"
+certifier: "Isometric"
+url: "https://vaulteddeep.com/payment/"
+logo: "/images/shops/vaulted-deep.png"

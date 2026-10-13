@@ -1,0 +1,15 @@
+# Climeworks — one shop in the directory. Edit and rebuild; the card renders from this file.
+name: "Climeworks"
+weight: 90
+rating:
+  mrv: A
+  certification: A
+  delivery: C
+method: "DAC and other methods"
+purchase: "One-time · Subscription"
+price: "US$500"
+price_unit: "per tonne CO₂"
+delivery_time: "<7 yrs"
+certifier: ""
+url: "https://climeworks.com/actnow"
+logo: "/images/shops/climeworks.png"
