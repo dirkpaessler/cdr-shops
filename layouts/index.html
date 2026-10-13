@@ -14,29 +14,36 @@
       {{ $aaa := 0 }}{{ range $shops }}{{ if and (eq .rating.mrv "A") (eq .rating.certification "A") (eq .rating.delivery "A") }}{{ $aaa = add $aaa 1 }}{{ end }}{{ end }}
       <p class="hero__stats">{{ $n }} shops listed · {{ $aaa }} rated AAA · every rating covers MRV, certification and delivery</p>
     </div>
-    <figure class="hero__viz" aria-label="Animated diagram: CO₂ is drawn out of the air and stored in the ground">
+    <figure class="hero__viz" aria-label="Animated diagram: CO₂ is drawn out of the air into three independent storage pathways">
       <svg viewBox="0 0 440 480" role="img" aria-hidden="true">
-        <!-- ground: three storage layers -->
-        <rect class="viz-l1" x="0" y="300" width="440" height="56" rx="10"/>
-        <rect class="viz-l2" x="0" y="364" width="440" height="56" rx="10"/>
-        <rect class="viz-l3" x="0" y="428" width="440" height="52" rx="10"/>
-        <!-- stored carbon dots -->
-        <g class="viz-stored">
-          <rect x="60" y="322" width="14" height="14" rx="3"/><rect x="200" y="318" width="14" height="14" rx="3"/><rect x="330" y="326" width="14" height="14" rx="3"/>
-          <rect x="120" y="386" width="14" height="14" rx="3"/><rect x="268" y="382" width="14" height="14" rx="3"/><rect x="388" y="390" width="14" height="14" rx="3"/>
-          <rect x="84" y="448" width="14" height="14" rx="3"/><rect x="232" y="446" width="14" height="14" rx="3"/><rect x="344" y="450" width="14" height="14" rx="3"/>
+        <!-- three independent storage pathways, side by side -->
+        <g>
+          <rect class="viz-l1" x="8" y="310" width="128" height="170" rx="10"/>
+          <rect class="viz-stored-ink" x="36" y="350" width="14" height="14" rx="3"/>
+          <rect class="viz-stored-ink" x="84" y="390" width="14" height="14" rx="3"/>
+          <rect class="viz-stored-ink" x="52" y="430" width="14" height="14" rx="3"/>
+          <text class="viz-label" x="72" y="466" text-anchor="middle">biochar</text>
         </g>
-        <!-- layer labels -->
-        <text class="viz-label" x="420" y="332" text-anchor="end">biochar</text>
-        <text class="viz-label viz-label--light" x="420" y="396" text-anchor="end">minerals</text>
-        <text class="viz-label viz-label--light" x="420" y="458" text-anchor="end">geologic storage</text>
-        <!-- CO₂ chips drifting down into the ground -->
-        <g class="viz-chip" style="--x: 48px; --y: 70px; --dur: 16s; --delay: 0s"><rect width="58" height="26" rx="6"/><text x="29" y="18">CO₂</text></g>
-        <g class="viz-chip" style="--x: 160px; --y: 160px; --dur: 20s; --delay: -7s"><rect width="58" height="26" rx="6"/><text x="29" y="18">CO₂</text></g>
-        <g class="viz-chip" style="--x: 268px; --y: 230px; --dur: 18s; --delay: -12s"><rect width="58" height="26" rx="6"/><text x="29" y="18">CO₂</text></g>
-        <g class="viz-chip" style="--x: 356px; --y: 110px; --dur: 22s; --delay: -3s"><rect width="58" height="26" rx="6"/><text x="29" y="18">CO₂</text></g>
+        <g>
+          <rect class="viz-l2" x="156" y="290" width="128" height="190" rx="10"/>
+          <rect class="viz-stored" x="186" y="334" width="14" height="14" rx="3"/>
+          <rect class="viz-stored" x="238" y="376" width="14" height="14" rx="3"/>
+          <rect class="viz-stored" x="202" y="420" width="14" height="14" rx="3"/>
+          <text class="viz-label viz-label--light" x="220" y="466" text-anchor="middle">minerals</text>
+        </g>
+        <g>
+          <rect class="viz-l3" x="304" y="330" width="128" height="150" rx="10"/>
+          <rect class="viz-stored" x="334" y="366" width="14" height="14" rx="3"/>
+          <rect class="viz-stored" x="386" y="400" width="14" height="14" rx="3"/>
+          <rect class="viz-stored" x="352" y="434" width="14" height="14" rx="3"/>
+          <text class="viz-label viz-label--light" x="368" y="466" text-anchor="middle">geologic</text>
+        </g>
+        <!-- one CO₂ chip per pathway, drifting down independently -->
+        <g class="viz-chip" style="--x: 43px; --y: 90px; --dur: 17s; --delay: 0s"><rect width="58" height="26" rx="6"/><text x="29" y="18">CO₂</text></g>
+        <g class="viz-chip" style="--x: 191px; --y: 170px; --dur: 21s; --delay: -8s"><rect width="58" height="26" rx="6"/><text x="29" y="18">CO₂</text></g>
+        <g class="viz-chip" style="--x: 339px; --y: 120px; --dur: 19s; --delay: -14s"><rect width="58" height="26" rx="6"/><text x="29" y="18">CO₂</text></g>
       </svg>
-      <figcaption>Out of the air, into permanent storage — that's carbon dioxide removal.</figcaption>
+      <figcaption>Three independent paths, one goal: CO₂ out of the air, into permanent storage.</figcaption>
     </figure>
   </div>
 </section>

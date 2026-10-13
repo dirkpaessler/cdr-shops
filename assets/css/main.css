@@ -106,9 +106,10 @@ h3 { font-size: 22px; line-height: 1.27; }
 .hero__viz svg { width: 100%; height: auto; display: block; overflow: hidden; border-radius: var(--radius-md); }
 .hero__viz figcaption { font-size: 12px; color: var(--ink-muted); margin-top: var(--space-2); text-align: right; }
 .viz-l1 { fill: var(--brand-tint); }
-.viz-l2 { fill: var(--brand); opacity: 0.85; }
+.viz-l2 { fill: var(--brand); opacity: 0.9; }
 .viz-l3 { fill: var(--ink); opacity: 0.9; }
-.viz-stored rect { fill: var(--surface-0); opacity: 0.55; }
+.viz-stored { fill: var(--surface-0); opacity: 0.55; }
+.viz-stored-ink { fill: var(--brand); opacity: 0.45; }
 .viz-label {
   font-family: var(--font-mono); font-size: 12px; fill: var(--ink); opacity: 0.75;
 }
