@@ -1,0 +1,7 @@
+{{- /* Internal absolute links (/foo/) must respect baseURL subpaths (e.g. github.io/cdr-shops/). */ -}}
+{{- $dest := .Destination -}}
+{{- if strings.HasPrefix $dest "/" -}}
+  {{- $dest = relURL (strings.TrimLeft "/" $dest) -}}
+{{- end -}}
+<a href="{{ $dest }}"{{ if strings.HasPrefix .Destination "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Text | safeHTML }}</a>
+{{- /* keep output on one line */ -}}

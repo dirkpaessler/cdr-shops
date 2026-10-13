@@ -3,10 +3,10 @@
   <div class="shell">
     <p class="eyebrow">Curated by the Carbon Drawdown Initiative</p>
     <h1 class="hero__title">Buy durable carbon removal online — in minutes.</h1>
-    <p class="hero__lead">A curated directory of shops where individuals and small businesses can purchase verified CDR quickly and transparently. We explain <a href="/why-buy-cdr/">why CDR is needed</a>, <a href="/how-to-choose-cdr/">how to choose</a> high-quality removals, and where to buy them — without endless sales calls.</p>
+    <p class="hero__lead">A curated directory of shops where individuals and small businesses can purchase verified CDR quickly and transparently. We explain <a href="{{ relURL "why-buy-cdr/" }}">why CDR is needed</a>, <a href="{{ relURL "how-to-choose-cdr/" }}">how to choose</a> high-quality removals, and where to buy them — without endless sales calls.</p>
     <div class="hero__actions">
-      <a class="cdrs-btn cdrs-btn--primary cdrs-btn--large" href="/cdr-shop-directory/">Browse the shop directory</a>
-      <a class="cdrs-btn cdrs-btn--secondary cdrs-btn--large" href="/why-buy-cdr/">Why buy CDR?</a>
+      <a class="cdrs-btn cdrs-btn--primary cdrs-btn--large" href="{{ relURL "cdr-shop-directory/" }}">Browse the shop directory</a>
+      <a class="cdrs-btn cdrs-btn--secondary cdrs-btn--large" href="{{ relURL "why-buy-cdr/" }}">Why buy CDR?</a>
     </div>
     {{ $shops := hugo.Data.shops }}
     {{ $n := len $shops }}
@@ -25,7 +25,7 @@
         {{ partial "shop-card.html" . }}
       {{ end }}
     </div>
-    <p class="section__more"><a class="cdrs-btn cdrs-btn--secondary" href="/cdr-shop-directory/">See all CDR shops</a></p>
+    <p class="section__more"><a class="cdrs-btn cdrs-btn--secondary" href="{{ relURL "cdr-shop-directory/" }}">See all CDR shops</a></p>
   </div>
 </section>
 
@@ -46,7 +46,7 @@
   <div class="shell">
     <h2>How it works</h2>
     <ol class="steps">
-      <li><strong>Browse rated shops.</strong> Every shop is rated A–C on MRV, certification, and delivery. <a href="/how-to-choose-cdr/">How we rate</a>.</li>
+      <li><strong>Browse rated shops.</strong> Every shop is rated A–C on MRV, certification, and delivery. <a href="{{ relURL "how-to-choose-cdr/" }}">How we rate</a>.</li>
       <li><strong>Choose your method.</strong> Biochar from US$150/t, enhanced weathering from €400/t, biomass burial from US$200/t, direct air capture from US$500/t.</li>
       <li><strong>Purchase online.</strong> Pay by card on the vendor's site, get documentation, optionally set up a subscription. Many removals are ex-post — already delivered when you buy.</li>
     </ol>
