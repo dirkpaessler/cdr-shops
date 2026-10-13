@@ -5,6 +5,7 @@ rating:
   mrv: A
   certification: A
   delivery: A
+method_group: biochar
 method: "Mostly biochar"
 purchase: "One-time"
 price: "US$150"

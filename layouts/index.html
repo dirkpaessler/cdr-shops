@@ -85,30 +85,34 @@
   <div class="shell">
     <h2>Four ways to remove a tonne</h2>
     <div class="method-band">
-      <div class="method">
+      {{ $d := relURL "cdr-shop-directory/" }}<a class="method" href="{{ $d }}#biochar">
         <svg viewBox="0 0 48 48" aria-hidden="true"><rect class="mi-tint" x="4" y="28" width="40" height="14" rx="4"/><rect class="mi-ink" x="10" y="32" width="6" height="6" rx="2"/><rect class="mi-ink" x="22" y="32" width="6" height="6" rx="2"/><rect class="mi-ink" x="34" y="32" width="6" height="6" rx="2"/><path class="mi-brand" d="M21 6 h6 v10 h5 l-8 10 -8 -10 h5 z"/></svg>
         <h3>Biochar</h3>
         <p>Plant waste becomes stable carbon, worked into soils.</p>
         <p class="method__price">from US$150/t</p>
-      </div>
-      <div class="method">
+        <span class="method__cta">Show shops →</span>
+      </a>
+      <a class="method" href="{{ $d }}#weathering">
         <svg viewBox="0 0 48 48" aria-hidden="true"><path class="mi-tint" d="M4 42 l10 -14 8 8 10 -16 12 22 z"/><path class="mi-brand" d="M21 4 h6 v8 h5 l-8 10 -8 -10 h5 z"/></svg>
         <h3>Enhanced weathering</h3>
         <p>Crushed rock binds CO₂ on farmland, for good.</p>
         <p class="method__price">from €386/t</p>
-      </div>
-      <div class="method">
+        <span class="method__cta">Show shops →</span>
+      </a>
+      <a class="method" href="{{ $d }}#dac">
         <svg viewBox="0 0 48 48" aria-hidden="true"><rect class="mi-tint" x="8" y="22" width="32" height="20" rx="4"/><rect class="mi-brand" x="14" y="28" width="20" height="3" rx="1.5"/><rect class="mi-brand" x="14" y="34" width="20" height="3" rx="1.5"/><path class="mi-brand" d="M21 2 h6 v8 h5 l-8 10 -8 -10 h5 z"/></svg>
         <h3>Direct air capture</h3>
         <p>Machines filter CO₂ from air into deep storage.</p>
         <p class="method__price">from US$500/t</p>
-      </div>
-      <div class="method">
+        <span class="method__cta">Show shops →</span>
+      </a>
+      <a class="method" href="{{ $d }}#burial">
         <svg viewBox="0 0 48 48" aria-hidden="true"><rect class="mi-tint" x="4" y="30" width="40" height="12" rx="4"/><rect class="mi-ink" x="18" y="33" width="12" height="6" rx="2"/><path class="mi-brand" d="M21 6 h6 v12 h5 l-8 10 -8 -10 h5 z"/></svg>
         <h3>Biomass burial &amp; bio-oil</h3>
         <p>Carbon-rich biomass, locked away underground.</p>
         <p class="method__price">from US$200/t</p>
-      </div>
+        <span class="method__cta">Show shops →</span>
+      </a>
     </div>
   </div>
 </section>
@@ -116,9 +120,9 @@
 <section class="section">
   <div class="shell">
     <h2>How it works</h2>
-    <ol class="steps">
+    {{ $d2 := relURL "cdr-shop-directory/" }}<ol class="steps">
       <li><strong>Browse rated shops.</strong> Every shop is rated A–C on MRV, certification, and delivery. <a href="{{ relURL "how-to-choose-cdr/" }}">How we rate</a>.</li>
-      <li><strong>Choose your method.</strong> Biochar from US$150/t, enhanced weathering from €400/t, biomass burial from US$200/t, direct air capture from US$500/t.</li>
+      <li><strong>Choose your method.</strong> <a href="{{ $d2 }}#biochar">Biochar</a> from US$150/t, <a href="{{ $d2 }}#weathering">enhanced weathering</a> from €300/t, <a href="{{ $d2 }}#burial">biomass burial</a> from US$200/t, <a href="{{ $d2 }}#dac">direct air capture</a> from US$500/t.</li>
       <li><strong>Purchase online.</strong> Pay by card on the vendor's site, get documentation, optionally set up a subscription. Many removals are ex-post — already delivered when you buy.</li>
     </ol>
   </div>

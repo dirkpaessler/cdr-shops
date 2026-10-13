@@ -6,6 +6,7 @@ rating:
   mrv: A
   certification: A
   delivery: A
+method_group: weathering
 method: "Enhanced weathering"
 purchase: "One-time · Subscription"
 price: "€300"

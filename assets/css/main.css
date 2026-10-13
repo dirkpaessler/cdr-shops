@@ -48,6 +48,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
@@ -310,3 +311,17 @@ h3 { font-size: 22px; line-height: 1.27; }
   .cdrs-btn, .cdrs-card, .site-header { transition: none; }
   .cdrs-card:hover, .cdrs-btn:hover { transform: none; }
 }
+
+/* ---- Method filter chips + clickable method tiles ---- */
+.method-filter { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-5); }
+.method-filter__btn {
+  padding: 7px 14px; border-radius: var(--radius-pill); border: 1px solid var(--line);
+  background: var(--surface-1); color: var(--ink); font-family: var(--font-sans);
+  font-size: 13px; font-weight: 600; cursor: pointer;
+}
+.method-filter__btn:hover { background: var(--brand-tint); }
+.method-filter__btn[aria-pressed="true"] { background: var(--brand); color: var(--brand-ink); border-color: var(--brand); }
+.method-filter__btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+a.method { text-decoration: none; color: inherit; display: block; padding: var(--space-3); margin: calc(-1 * var(--space-3)); border-radius: var(--radius-md); }
+a.method:hover { background: var(--brand-tint); }
+.method__cta { display: inline-block; margin-top: var(--space-2); font-size: 13px; font-weight: 600; color: var(--brand); }

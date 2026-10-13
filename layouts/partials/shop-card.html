@@ -3,7 +3,7 @@
 {{- $overall := printf "%s%s%s" $r.mrv $r.certification $r.delivery -}}
 {{- $worst := "a" -}}
 {{- if in $overall "C" }}{{ $worst = "c" }}{{ else if in $overall "B" }}{{ $worst = "b" }}{{ end -}}
-<article class="cdrs-card{{ if .featured }} cdrs-card--featured{{ end }}">
+<article class="cdrs-card{{ if .featured }} cdrs-card--featured{{ end }}" data-method="{{ .method_group | default "other" }}">
   {{ if .featured }}<span class="cdrs-card__eyebrow">Featured</span>{{ end }}
   <div class="cdrs-card__head">
     <h3 class="cdrs-card__name">{{ .name }}</h3>

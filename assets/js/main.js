@@ -38,3 +38,27 @@
     io.observe(el);
   });
 })();
+
+/* Method filter on the directory (progressive: the bar is hidden without JS). */
+(function () {
+  var bar = document.querySelector('.method-filter');
+  if (!bar) return;
+  bar.hidden = false;
+  var cards = document.querySelectorAll('.card-grid .cdrs-card');
+  var buttons = bar.querySelectorAll('.method-filter__btn');
+  function apply(filter) {
+    buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.filter === filter)); });
+    cards.forEach(function (c) {
+      c.hidden = filter !== 'all' && c.dataset.method !== filter;
+    });
+  }
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var f = b.dataset.filter;
+      apply(f);
+      try { history.replaceState(null, '', f === 'all' ? location.pathname : '#' + f); } catch (e) {}
+    });
+  });
+  var h = (location.hash || '').replace('#', '');
+  if (h && bar.querySelector('[data-filter="' + CSS.escape(h) + '"]')) apply(h);
+})();

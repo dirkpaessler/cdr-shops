@@ -6,6 +6,14 @@
   </div>
   {{ $shops := slice }}
   {{ range $k, $s := hugo.Data.shops }}{{ $shops = $shops | append $s }}{{ end }}
+  {{ $groups := dict "biochar" "Biochar" "weathering" "Enhanced weathering" "dac" "Direct air capture" "burial" "Burial & bio-oil" "portfolio" "Portfolio" }}
+  <div class="method-filter" role="group" aria-label="Filter by method" hidden>
+    <button class="method-filter__btn" data-filter="all" aria-pressed="true">All ({{ len $shops }})</button>
+    {{ range $key := slice "biochar" "weathering" "dac" "burial" "portfolio" }}
+      {{ $n := 0 }}{{ range $shops }}{{ if eq .method_group $key }}{{ $n = add $n 1 }}{{ end }}{{ end }}
+      {{ if gt $n 0 }}<button class="method-filter__btn" data-filter="{{ $key }}" aria-pressed="false">{{ index $groups $key }} ({{ $n }})</button>{{ end }}
+    {{ end }}
+  </div>
   <div class="card-grid">
     {{ range sort $shops "weight" }}
       {{ partial "shop-card.html" . }}

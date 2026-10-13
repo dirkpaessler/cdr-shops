@@ -5,6 +5,7 @@ rating:
   mrv: A
   certification: A
   delivery: C
+method_group: dac
 method: "DAC and other methods"
 purchase: "One-time · Subscription"
 price: "US$500"
