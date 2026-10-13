@@ -101,29 +101,53 @@ h3 { font-size: 22px; line-height: 1.27; }
 .hero { padding-block: var(--space-8) var(--space-7); }
 .hero__grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: var(--space-7); align-items: center; }
 @media (max-width: 860px) { .hero__grid { grid-template-columns: 1fr; } .hero__photo { display: none; } }
-.hero__photo { margin: 0; }
-.hero__photo img { width: 100%; height: auto; border-radius: var(--radius-md); box-shadow: var(--shadow-card); }
-.hero__photo figcaption, .photo-credit, .page-photo figcaption {
-  font-size: 12px; color: var(--ink-muted); margin-top: var(--space-2);
+/* ---- Hero viz: CO₂ chips drift from the air into labeled storage layers ---- */
+.hero__viz { margin: 0; }
+.hero__viz svg { width: 100%; height: auto; display: block; overflow: hidden; border-radius: var(--radius-md); }
+.hero__viz figcaption { font-size: 12px; color: var(--ink-muted); margin-top: var(--space-2); text-align: right; }
+.viz-l1 { fill: var(--brand-tint); }
+.viz-l2 { fill: var(--brand); opacity: 0.85; }
+.viz-l3 { fill: var(--ink); opacity: 0.9; }
+.viz-stored rect { fill: var(--surface-0); opacity: 0.55; }
+.viz-label {
+  font-family: var(--font-mono); font-size: 12px; fill: var(--ink); opacity: 0.75;
 }
-.hero__photo figcaption { text-align: right; }
+.viz-label--light { fill: var(--surface-0); }
+.viz-chip rect { fill: var(--surface-1); stroke: var(--line); }
+.viz-chip text {
+  font-family: var(--font-mono); font-size: 14px; font-weight: 700;
+  fill: var(--ink); text-anchor: middle;
+}
+.viz-chip { transform: translate(var(--x), var(--y, 70px)); }
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes chip-sink {
+    0% { transform: translate(var(--x), -40px); opacity: 0; }
+    8% { opacity: 1; }
+    70% { transform: translate(var(--x), 300px); opacity: 1; }
+    92% { transform: translate(var(--x), 400px); opacity: 0; }
+    100% { transform: translate(var(--x), 400px); opacity: 0; }
+  }
+  .viz-chip {
+    animation: chip-sink var(--dur) linear infinite;
+    animation-delay: var(--delay);
+  }
+}
 
-/* ---- Photo strips ---- */
-.photo-strip {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4);
-  padding-top: var(--space-7);
+/* ---- Method band ---- */
+.method-band {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-5);
 }
-.photo-strip img {
-  width: 100%; height: 240px; object-fit: cover; border-radius: var(--radius-md);
-  box-shadow: var(--shadow-card); display: block;
+.method svg { width: 48px; height: 48px; margin-bottom: var(--space-2); }
+.method h3 { font-family: var(--font-sans); font-weight: 700; font-size: 17px; margin: 0 0 var(--space-1); }
+.method p { font-size: 14px; line-height: 20px; color: var(--ink-muted); margin: 0; max-width: 32ch; }
+.method__price {
+  font-family: var(--font-mono); color: var(--ink); font-size: 13px;
+  margin-top: var(--space-2); font-variant-numeric: tabular-nums;
 }
-@media (max-width: 640px) { .photo-strip { grid-template-columns: 1fr; } .photo-strip img { height: 200px; } }
-.photo-credit { text-align: right; margin: var(--space-2) 0 0; }
-.page-photo { margin: 0 0 var(--space-5); }
-.page-photo img {
-  width: 100%; max-width: 680px; height: 260px; object-fit: cover;
-  border-radius: var(--radius-md); box-shadow: var(--shadow-card); display: block;
-}
+.mi-brand { fill: var(--brand); }
+.mi-tint { fill: var(--brand-tint); }
+.mi-ink { fill: var(--brand); opacity: 0.55; }
 .eyebrow {
   font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--brand); margin: 0 0 var(--space-3);

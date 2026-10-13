@@ -17,7 +17,7 @@
   docEl.classList.add('motion');
 
   // Scroll reveal: elements rise in once, staggered per viewport batch.
-  var targets = document.querySelectorAll('.cdrs-card, .section h2, .steps li, .split > div, .directory-foot, .photo-strip img');
+  var targets = document.querySelectorAll('.cdrs-card, .section h2, .steps li, .split > div, .directory-foot, .method');
   var batchIndex = 0;
   var lastTime = 0;
   var io = new IntersectionObserver(function (entries) {

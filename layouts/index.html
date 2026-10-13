@@ -14,9 +14,29 @@
       {{ $aaa := 0 }}{{ range $shops }}{{ if and (eq .rating.mrv "A") (eq .rating.certification "A") (eq .rating.delivery "A") }}{{ $aaa = add $aaa 1 }}{{ end }}{{ end }}
       <p class="hero__stats">{{ $n }} shops listed · {{ $aaa }} rated AAA · every rating covers MRV, certification and delivery</p>
     </div>
-    <figure class="hero__photo">
-      <img src="{{ relURL "images/photos/coast-walkers.jpg" }}" alt="Two people walking along a wide beach beneath coastal cliffs" width="480" height="640" loading="eager">
-      <figcaption>Worth keeping. Photo: Dirk Paessler</figcaption>
+    <figure class="hero__viz" aria-label="Animated diagram: CO₂ is drawn out of the air and stored in the ground">
+      <svg viewBox="0 0 440 480" role="img" aria-hidden="true">
+        <!-- ground: three storage layers -->
+        <rect class="viz-l1" x="0" y="300" width="440" height="56" rx="10"/>
+        <rect class="viz-l2" x="0" y="364" width="440" height="56" rx="10"/>
+        <rect class="viz-l3" x="0" y="428" width="440" height="52" rx="10"/>
+        <!-- stored carbon dots -->
+        <g class="viz-stored">
+          <rect x="60" y="322" width="14" height="14" rx="3"/><rect x="200" y="318" width="14" height="14" rx="3"/><rect x="330" y="326" width="14" height="14" rx="3"/>
+          <rect x="120" y="386" width="14" height="14" rx="3"/><rect x="268" y="382" width="14" height="14" rx="3"/><rect x="388" y="390" width="14" height="14" rx="3"/>
+          <rect x="84" y="448" width="14" height="14" rx="3"/><rect x="232" y="446" width="14" height="14" rx="3"/><rect x="344" y="450" width="14" height="14" rx="3"/>
+        </g>
+        <!-- layer labels -->
+        <text class="viz-label" x="420" y="332" text-anchor="end">biochar</text>
+        <text class="viz-label viz-label--light" x="420" y="396" text-anchor="end">minerals</text>
+        <text class="viz-label viz-label--light" x="420" y="458" text-anchor="end">geologic storage</text>
+        <!-- CO₂ chips drifting down into the ground -->
+        <g class="viz-chip" style="--x: 48px; --y: 70px; --dur: 16s; --delay: 0s"><rect width="58" height="26" rx="6"/><text x="29" y="18">CO₂</text></g>
+        <g class="viz-chip" style="--x: 160px; --y: 160px; --dur: 20s; --delay: -7s"><rect width="58" height="26" rx="6"/><text x="29" y="18">CO₂</text></g>
+        <g class="viz-chip" style="--x: 268px; --y: 230px; --dur: 18s; --delay: -12s"><rect width="58" height="26" rx="6"/><text x="29" y="18">CO₂</text></g>
+        <g class="viz-chip" style="--x: 356px; --y: 110px; --dur: 22s; --delay: -3s"><rect width="58" height="26" rx="6"/><text x="29" y="18">CO₂</text></g>
+      </svg>
+      <figcaption>Out of the air, into permanent storage — that's carbon dioxide removal.</figcaption>
     </figure>
   </div>
 </section>
@@ -48,14 +68,37 @@
   </div>
 </section>
 
-<div class="shell">
-  <div class="photo-strip">
-    <img src="{{ relURL "images/photos/sunset-sea.jpg" }}" alt="Sun setting over the sea" loading="lazy">
-    <img src="{{ relURL "images/photos/beach-spiral.jpg" }}" alt="A spiral drawn into wet beach sand" loading="lazy">
-    <img src="{{ relURL "images/photos/mountains-lake.jpg" }}" alt="Mountain range above a lake" loading="lazy">
+<section class="section">
+  <div class="shell">
+    <h2>Four ways to remove a tonne</h2>
+    <div class="method-band">
+      <div class="method">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect class="mi-tint" x="4" y="28" width="40" height="14" rx="4"/><rect class="mi-ink" x="10" y="32" width="6" height="6" rx="2"/><rect class="mi-ink" x="22" y="32" width="6" height="6" rx="2"/><rect class="mi-ink" x="34" y="32" width="6" height="6" rx="2"/><path class="mi-brand" d="M21 6 h6 v10 h5 l-8 10 -8 -10 h5 z"/></svg>
+        <h3>Biochar</h3>
+        <p>Plant waste becomes stable carbon, worked into soils.</p>
+        <p class="method__price">from US$150/t</p>
+      </div>
+      <div class="method">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path class="mi-tint" d="M4 42 l10 -14 8 8 10 -16 12 22 z"/><path class="mi-brand" d="M21 4 h6 v8 h5 l-8 10 -8 -10 h5 z"/></svg>
+        <h3>Enhanced weathering</h3>
+        <p>Crushed rock binds CO₂ on farmland, for good.</p>
+        <p class="method__price">from €386/t</p>
+      </div>
+      <div class="method">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect class="mi-tint" x="8" y="22" width="32" height="20" rx="4"/><rect class="mi-brand" x="14" y="28" width="20" height="3" rx="1.5"/><rect class="mi-brand" x="14" y="34" width="20" height="3" rx="1.5"/><path class="mi-brand" d="M21 2 h6 v8 h5 l-8 10 -8 -10 h5 z"/></svg>
+        <h3>Direct air capture</h3>
+        <p>Machines filter CO₂ from air into deep storage.</p>
+        <p class="method__price">from US$500/t</p>
+      </div>
+      <div class="method">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect class="mi-tint" x="4" y="30" width="40" height="12" rx="4"/><rect class="mi-ink" x="18" y="33" width="12" height="6" rx="2"/><path class="mi-brand" d="M21 6 h6 v12 h5 l-8 10 -8 -10 h5 z"/></svg>
+        <h3>Biomass burial &amp; bio-oil</h3>
+        <p>Carbon-rich biomass, locked away underground.</p>
+        <p class="method__price">from US$200/t</p>
+      </div>
+    </div>
   </div>
-  <p class="photo-credit">Photos: Dirk Paessler, <a href="https://www.instagram.com/dpaessler" target="_blank" rel="noopener">@dpaessler</a></p>
-</div>
+</section>
 
 <section class="section">
   <div class="shell">

@@ -1,8 +1,6 @@
 ---
 title: "Why buy CDR?"
 description: "Why carbon dioxide removal is needed alongside emission cuts — and how much to buy."
-photo: "images/photos/moon-ocean.jpg"
-photo_alt: "Moonlight reflected on a calm sea"
 ---
 
 ## Cut emissions fast — and actively remove what's left.
