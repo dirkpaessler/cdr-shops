@@ -1,9 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96">
-  <!-- CDR Shops mark: shopping bag + drawdown arrow on a pine tile.
-       Tile #175c43 = brand (light), bag #f6f8f6 = surface-0, arrow cut in brand. -->
-  <rect x="0" y="0" width="96" height="96" rx="20" fill="#175c43"/>
-  <path d="M36 36 a12 12 0 0 1 24 0" fill="none" stroke="#f6f8f6" stroke-width="7" stroke-linecap="round"/>
-  <rect x="24" y="34" width="48" height="42" rx="7" fill="#f6f8f6"/>
-  <rect x="44" y="41" width="8" height="17" fill="#175c43"/>
-  <path d="M36 56 h24 l-12 14 z" fill="#175c43"/>
+  <!-- CDR Shops mark V3c: three staggered bags (a group of shops), the front one
+       carrying "CDR" and the drawdown arrow. Pine #175c43, light green #4cab7f,
+       paper #f6f8f6 — tokens of the CDR Shops design system. -->
+  <rect width="96" height="96" rx="20" fill="#175c43"/>
+  <path d="M20 46 a7 7 0 0 1 14 0" fill="none" stroke="#4cab7f" stroke-width="5" stroke-linecap="round"/>
+  <rect x="14" y="46" width="26" height="26" rx="5" fill="#4cab7f"/>
+  <path d="M62 46 a7 7 0 0 1 14 0" fill="none" stroke="#4cab7f" stroke-width="5" stroke-linecap="round"/>
+  <rect x="56" y="46" width="26" height="26" rx="5" fill="#4cab7f"/>
+  <path d="M38 40 a10 10 0 0 1 20 0" fill="none" stroke="#f6f8f6" stroke-width="6" stroke-linecap="round"/>
+  <rect x="30" y="40" width="36" height="36" rx="6" fill="#f6f8f6"/>
+  <g fill="none" stroke="#175c43" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M41 48.5 h-5.5 v11 h5.5"/>
+    <path d="M45.5 48.5 v11 h1.2 a5.5 5.5 0 0 0 0 -11 z"/>
+    <path d="M57 59.5 v-11 h3 a3.1 3.1 0 0 1 0 6.2 h-3 M60.2 54.7 l2.4 4.8"/>
+  </g>
+  <path d="M42 64 h12 l-6 8 z" fill="#175c43"/>
 </svg>
