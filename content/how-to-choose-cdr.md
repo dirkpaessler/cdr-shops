@@ -1,6 +1,8 @@
 ---
 title: "How to choose CDR?"
 description: "Non-negotiables for a good CDR purchase, recognized certification standards, and how our A–C ratings work."
+photo: "images/photos/sand-patterns.jpg"
+photo_alt: "Branching patterns formed by water in beach sand"
 ---
 
 What makes a good CDR purchase? There are a few non-negotiables that must be met to be listed in our directory. To navigate the other aspects we have created a simple rating system for our directory, described below.

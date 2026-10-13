@@ -1,6 +1,12 @@
 {{ define "main" }}
 <article class="shell prose">
   <h1>{{ .Title }}</h1>
+  {{ with .Params.photo }}
+  <figure class="page-photo">
+    <img src="{{ relURL . }}" alt="{{ $.Params.photo_alt | default "" }}" loading="eager">
+    <figcaption>Photo: Dirk Paessler</figcaption>
+  </figure>
+  {{ end }}
   {{ .Content }}
 </article>
 {{ end }}

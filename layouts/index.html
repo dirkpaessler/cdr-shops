@@ -1,17 +1,23 @@
 {{ define "main" }}
 <section class="hero">
-  <div class="shell">
-    <p class="eyebrow">Curated by the Carbon Drawdown Initiative</p>
-    <h1 class="hero__title">Buy durable carbon removal online — in minutes.</h1>
-    <p class="hero__lead">A curated directory of shops where individuals and small businesses can purchase verified CDR quickly and transparently. We explain <a href="{{ relURL "why-buy-cdr/" }}">why CDR is needed</a>, <a href="{{ relURL "how-to-choose-cdr/" }}">how to choose</a> high-quality removals, and where to buy them — without endless sales calls.</p>
-    <div class="hero__actions">
-      <a class="cdrs-btn cdrs-btn--primary cdrs-btn--large" href="{{ relURL "cdr-shop-directory/" }}">Browse the shop directory</a>
-      <a class="cdrs-btn cdrs-btn--secondary cdrs-btn--large" href="{{ relURL "why-buy-cdr/" }}">Why buy CDR?</a>
+  <div class="shell hero__grid">
+    <div>
+      <p class="eyebrow">Curated by the Carbon Drawdown Initiative</p>
+      <h1 class="hero__title">Buy durable carbon removal online — in minutes.</h1>
+      <p class="hero__lead">A curated directory of shops where individuals and small businesses can purchase verified CDR quickly and transparently. We explain <a href="{{ relURL "why-buy-cdr/" }}">why CDR is needed</a>, <a href="{{ relURL "how-to-choose-cdr/" }}">how to choose</a> high-quality removals, and where to buy them — without endless sales calls.</p>
+      <div class="hero__actions">
+        <a class="cdrs-btn cdrs-btn--primary cdrs-btn--large" href="{{ relURL "cdr-shop-directory/" }}">Browse the shop directory</a>
+        <a class="cdrs-btn cdrs-btn--secondary cdrs-btn--large" href="{{ relURL "why-buy-cdr/" }}">Why buy CDR?</a>
+      </div>
+      {{ $shops := hugo.Data.shops }}
+      {{ $n := len $shops }}
+      {{ $aaa := 0 }}{{ range $shops }}{{ if and (eq .rating.mrv "A") (eq .rating.certification "A") (eq .rating.delivery "A") }}{{ $aaa = add $aaa 1 }}{{ end }}{{ end }}
+      <p class="hero__stats">{{ $n }} shops listed · {{ $aaa }} rated AAA · every rating covers MRV, certification and delivery</p>
     </div>
-    {{ $shops := hugo.Data.shops }}
-    {{ $n := len $shops }}
-    {{ $aaa := 0 }}{{ range $shops }}{{ if and (eq .rating.mrv "A") (eq .rating.certification "A") (eq .rating.delivery "A") }}{{ $aaa = add $aaa 1 }}{{ end }}{{ end }}
-    <p class="hero__stats">{{ $n }} shops listed · {{ $aaa }} rated AAA · every rating covers MRV, certification and delivery</p>
+    <figure class="hero__photo">
+      <img src="{{ relURL "images/photos/coast-walkers.jpg" }}" alt="Two people walking along a wide beach beneath coastal cliffs" width="480" height="640" loading="eager">
+      <figcaption>Worth keeping. Photo: Dirk Paessler</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -41,6 +47,15 @@
     </div>
   </div>
 </section>
+
+<div class="shell">
+  <div class="photo-strip">
+    <img src="{{ relURL "images/photos/sunset-sea.jpg" }}" alt="Sun setting over the sea" loading="lazy">
+    <img src="{{ relURL "images/photos/beach-spiral.jpg" }}" alt="A spiral drawn into wet beach sand" loading="lazy">
+    <img src="{{ relURL "images/photos/mountains-lake.jpg" }}" alt="Mountain range above a lake" loading="lazy">
+  </div>
+  <p class="photo-credit">Photos: Dirk Paessler, <a href="https://www.instagram.com/dpaessler" target="_blank" rel="noopener">@dpaessler</a></p>
+</div>
 
 <section class="section">
   <div class="shell">

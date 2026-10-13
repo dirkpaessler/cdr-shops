@@ -1,6 +1,8 @@
 ---
 title: "About us"
 description: "Who runs the CDR shop directory and why it exists."
+photo: "images/photos/lighthouse-dusk.jpg"
+photo_alt: "A lighthouse on a headland at dusk"
 ---
 
 ## Carbon Drawdown Initiative
