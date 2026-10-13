@@ -1,0 +1,16 @@
+# NULIFE GreenTech — one shop in the directory. Edit and rebuild; the card renders from this file.
+name: "NULIFE GreenTech"
+weight: 106
+rating:
+  mrv: A
+  certification: A
+  delivery: C
+method: "Bio-oil + geological storage"
+purchase: "One-time · Subscription"
+price: "US$500"
+price_unit: "per tonne CO₂"
+delivery_time: "2028–2030"
+certifier: "Isometric"
+url: "https://nulifegreentech.com/payment/"
+logo: "/images/shops/nulife-greentech.png"
+note: "Plus US$10/t verification fee at checkout"

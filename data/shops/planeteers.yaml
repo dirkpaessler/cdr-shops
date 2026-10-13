@@ -1,0 +1,16 @@
+# Planeteers — one shop in the directory. Edit and rebuild; the card renders from this file.
+name: "Planeteers"
+weight: 103
+rating:
+  mrv: A
+  certification: A
+  delivery: C
+method: "Accelerated weathering of limestone"
+purchase: "One-time · Subscription"
+price: "€386"
+price_unit: "per tonne CO₂"
+delivery_time: ""
+certifier: "Isometric"
+url: "https://planeteers.de/en/buy-credits/"
+logo: "/images/shops/planeteers.png"
+note: "Plus €28.50/t verification fee at checkout"
